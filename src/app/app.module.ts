@@ -3,10 +3,14 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { NotFountComponent } from './shared/not-fount/not-fount.component';
+import { TemplateComponent } from './thema/template/template.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NotFountComponent,
+    TemplateComponent
   ],
   imports: [
     BrowserModule,

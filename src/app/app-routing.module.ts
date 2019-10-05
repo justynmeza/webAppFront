@@ -10,12 +10,25 @@ const routes: Routes = [
     loadChildren: './auth/auth.module#AuthModule'
   },
   {
+    path:'#',
+    component:TemplateComponent,
+    loadChildren: './localhost:4200/#/'
+  },
+  {
     path: 'pages',
     component: TemplateComponent,
     children: [
       {
       path: 'biblioteca',
       loadChildren: './pages/biblioteca/biblioteca.module#BibliotecaModule'
+      },
+      {
+        path:'academico',
+        loadChildren:'./pages/academico/academico.module#AcademicoModule'
+      },
+      {
+        path:'administración',
+        loadChildren:'./pages/administración/administración.module#AdministraciónModule'
       }
     ]
   },
